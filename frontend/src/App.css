@@ -115,7 +115,7 @@ textarea:not([rows]) {
 .login-header {
   border: 1px solid black;
   width: 33%;
-  height: 10vh;
+  /* height: 10vh; */
   text-align: center;
   background-color: var(--bc-orange);
   margin: 5% auto 0 auto;
@@ -140,14 +140,15 @@ textarea:not([rows]) {
 .login-main {
   background-color: var(--bc-teal);
   width: 33%;
-  min-height: 50vh;
   margin: 0 auto 0 auto;
   border: 1px solid black;
   padding: clamp(2rem, 4vw, 4rem);
   padding-top: 0;
   border: 1px solid black;
-
 }
+
+
+
 
 
 

@@ -11,6 +11,19 @@ function App() {
         <h1>Bookchat</h1>
       </header>
       <main className="login-main">
+        <form action="" className="">
+          <div className="form-control">
+            <label htmlFor="" className="username">
+              <input type="text" />
+            </label>
+          </div>
+        </form>
+        <div className="form-control">
+          <label htmlFor="" className="room">
+            <input type="text" />
+          </label>
+        </div>
+
 
       </main>
     </div>
