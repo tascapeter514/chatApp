@@ -1,5 +1,5 @@
 
-
+import Book from './assets/book.png';
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="login-container">
       <header className="login-header">
-        <img src="" alt="open-book" className='book' />
+        <img src={Book} alt="open-book" className='book' />
         <h1>Bookchat</h1>
       </header>
       <main className="login-main">

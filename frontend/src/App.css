@@ -14,16 +14,21 @@
     font-weight: 700;
 }
 
-
-
-
 :root {
+
 
   /* Color Palette */
   --bc-beige: #FBF5DD;
   --bc-teal: #A6CDC6;
   --bc-navy: #16404D;
   --bc-orange: #DDA853;
+
+  /* Neutral Shades */
+
+  --clr-neutral-800: hsl(234, 29%, 20%);
+  --clr-neutral-700: hsl(235, 18%, 26%);
+  --clr-neutral-200: hsl(231, 7%, 60%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
 
   /* font styles */
 
@@ -74,18 +79,12 @@ ol[role='list'] {
 }
 
 body {
-  /* font-family: var(--ff-base);
-  font-weight: var(--fw-regular); */
   font-family: 'Lato Regular';
   line-height: 1.5;
   display: grid;
   place-content: center;
-  border: 1px solid black;
   padding: min(5vh, 5rem) min(5vw, 5rem);
   background-color: var(--bc-beige);
-
-
-
 }
 
 
@@ -107,15 +106,18 @@ body {
 }
 
 .book {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   align-self: center;
+  max-width: 20%;
+  min-width: 15%;
+  
 }
 
 
 .login-header > h1 {
   font-size: clamp(var(--fs-thirty), 2.25rem, var(--fs-thirtySix));
   font-family: 'Lato Bold';
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-block: auto;
   
 }
@@ -123,27 +125,36 @@ body {
 .login-main {
   /* border: 3px solid lime; */
   background-color: var(--bc-teal);
-  padding: min(5vh, 5rem) min(1vw, 1rem);
+  padding: min(5vh, 5rem) min(5vw, 5rem);
   margin: auto;
   font-size: clamp(var(--fs-sixteen), 1.125rem, var(--fs-eighteen) );
   display: grid;
   grid-template-rows: 3rem auto;
   min-width: 100%;
+  
+
 }
 
 .login-main > p {
-  text-align: center;
+  text-align:center;
   font-size: clamp(var(--fs-twentyFour), 1.5rem, var(--fs-thirty));
   font-weight: bold;
 }
 
 .login-form {
+  /* border: 3px solid yellow; */
   display: grid;
   grid-template-rows: 3rem auto;
   gap: 2rem;
-  /* border: 3px solid yellow; */
+  padding: min(2.5vh, 2.5rem) min(5vw, 5rem);
+  align-items: center;
+  justify-content: stretch;
+  min-width: 100%;
+}
 
-  padding: min(2.5vh, 2.5rem) 0;
+.form-control {
+  width: 100%
+
 }
 
 label, input {
@@ -151,14 +162,38 @@ label, input {
   display: block;
 }
 
-input, select {
-  width: 100%;
+input, select, .join-btn {
+  min-width: 100%;
   line-height: 2;
   font: inherit;
+  box-sizing: border-box;
+}
+
+input {
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid var(--clr-neutral-200);
+}
+
+input::placeholder {
+  color: var(--clr-neutral-200)
 }
 
 
 .join-btn {
   font: inherit;
+  background: var(--bc-navy);
+  color: white;
+  border: 1px solid var(--bc-navy);
+  border-radius: .5rem;
+  padding: .25rem .5rem;
+  font-weight: var(--fw-bold);
+}
+
+.join-btn:hover,
+.join-btn:focus-visible
+ {
+  background-color: var(--bc-beige);
+  color: var(--bc-navy);
 }
 
