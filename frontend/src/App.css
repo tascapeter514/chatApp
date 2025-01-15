@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato Regular";
   src:
     local('Lato regular'),
     url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato Bold";
   src:
     local('Lato bold'),
     url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -74,12 +74,15 @@ ol[role='list'] {
 }
 
 body {
-  font-family: var(--ff-base);
-  font-weight: var(--fw-regular);
+  /* font-family: var(--ff-base);
+  font-weight: var(--fw-regular); */
+  font-family: 'Lato Regular';
   line-height: 1.5;
   display: grid;
   place-content: center;
-  padding: min(5vh, 5rem) min (5vw, 5rem);
+  border: 1px solid black;
+  padding: min(5vh, 5rem) min(5vw, 5rem);
+  background-color: var(--bc-beige);
 
 
 
@@ -89,21 +92,18 @@ body {
 
 
 .login-container {
-  /* padding: 0 min(10vw, 10rem) min(2vh, 2rem) min(10vw, 10rem); */
-  
-  border: 3px solid red;
-  /* max-width: 40%; */
-  margin: auto;
+  /* border: 3px solid red; */
+  border: 1px solid black;
   display: grid;
-
-
 }
 
 .login-header {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: var(--bc-orange);
   display: flex;
   justify-content: center;
-  padding: min(2vh, 2rem) min(2vw, 2rem)
+  gap: 1rem;
+  padding: min(2vh, 2rem) min(5vw, 5rem)
 }
 
 .book {
@@ -111,56 +111,54 @@ body {
   align-self: center;
 }
 
-/* .login-header {
-  border: 1px solid black;
-  text-align: center;
-  max-width: 40%;
-  background-color: var(--bc-orange);
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-} */
-
 
 .login-header > h1 {
-  font-size: var(--fs-thirty);
+  font-size: clamp(var(--fs-thirty), 2.25rem, var(--fs-thirtySix));
+  font-family: 'Lato Bold';
   border: 1px solid black;
   margin-block: auto;
   
 }
 
-
-
-
-
 .login-main {
-  border: 3px solid lime;
-  padding: min(5vh, 5rem) min(5vw, 5rem);
+  /* border: 3px solid lime; */
+  background-color: var(--bc-teal);
+  padding: min(5vh, 5rem) min(1vw, 1rem);
   margin: auto;
-  /* max-width: 90%; */
+  font-size: clamp(var(--fs-sixteen), 1.125rem, var(--fs-eighteen) );
+  display: grid;
+  grid-template-rows: 3rem auto;
+  min-width: 100%;
+}
+
+.login-main > p {
+  text-align: center;
+  font-size: clamp(var(--fs-twentyFour), 1.5rem, var(--fs-thirty));
+  font-weight: bold;
 }
 
 .login-form {
   display: grid;
-  grid-template-rows: 2.5rem auto;
-  gap: 1rem;
+  grid-template-rows: 3rem auto;
+  gap: 2rem;
+  /* border: 3px solid yellow; */
+
+  padding: min(2.5vh, 2.5rem) 0;
 }
 
 label, input {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: block;
 }
 
+input, select {
+  width: 100%;
+  line-height: 2;
+  font: inherit;
+}
 
 
-/* .login-main {
-  background-color: var(--bc-teal);
-  margin: 0 auto 0 auto;
-  border: 1px solid black;
-  padding: clamp(2rem, 4vw, 4rem);
-  padding-top: 0;
-  border: 1px solid black;
-  max-width: 40%;
-} */
+.join-btn {
+  font: inherit;
+}
+
